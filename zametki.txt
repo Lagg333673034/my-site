@@ -14,6 +14,12 @@ npm i @mui/lab
 npm run build
 
 
+//
+npm install --save gh-pages
+"deploy": "gh-pages -d build", -- add to scripts
+npm run deploy
+
+
 Other:<br/>
 //Drawer<br/> -- mobile
 //Speed Dial<br/> -- mobile
