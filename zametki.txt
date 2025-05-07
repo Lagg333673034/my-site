@@ -1,0 +1,11 @@
+npx create-react-app . --template typescript
+npm i react-router-dom @types/react-router-dom
+npm i @mui/material @emotion/react @emotion/styled
+npm i @mui/icons-material
+npm i --save material-ui-popup-state
+npm i @mui/lab
+
+
+
+
+npm run build

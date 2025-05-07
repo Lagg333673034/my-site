@@ -1,0 +1,96 @@
+body{
+    font-size: 16px;
+    margin: 10px 15px;
+    padding: 0;
+}
+.waitServerWakeUp{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    font-size: 1.2rem;
+}
+/*---------------------------------------------------------------*/
+.block1Container {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.block1Left{
+    display: block;
+    min-width: 360px;
+}
+.block1Right{
+    display: block;
+    min-width: 360px;
+}
+/*---------------------------------------------------------------*/
+.myIcons{
+    font-size: 1rem;
+    padding: 1px; 
+    margin: 1px;
+    border: 1px solid; 
+    border-radius: 5px;
+}
+/*---------------------------------------------------------------*/
+div.mainSkills > div.MuiChip-root{
+    color: black;
+    background-color: #50baff;
+}
+div.secondarySkills > div.MuiChip-root{
+    color: black;
+    background-color: #fff4a3;
+}
+/*---------------------------------------------------------------*/
+.tlOppositeContent{
+    min-width: 100px !important;
+    max-width: 130px !important;
+    padding: 15px 10px 15px 0px !important;
+    font-size: 0.9rem !important;
+    margin: auto 0 !important;
+    color: #3a3a3a;
+}
+div.tlContent{
+    line-height: 1;
+    padding: 15px 10px !important;
+}
+div.tlCompanyName{
+    font-size: 1rem;
+    font-weight: bold;
+    color: blue;
+    margin: 0 0 5px 0;
+}
+div.tlPostName{
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+div.tlDescription > p{
+    margin: 0;
+    padding: 0;
+    color: #525252;
+    font-size: 1rem;
+    font-family: auto;
+    text-align: justify;
+}
+
+
+div.tlSeparWork > span.MuiTimelineConnector-root{
+    background-color: purple !important;
+}
+div.tlSeparWork > span.MuiTimelineDot-root{
+    background-color: white;
+    border: 1px solid purple;
+}
+div.tlSeparWork > span.MuiTimelineDot-root > svg.MuiSvgIcon-root{
+    fill: purple;
+}
+div.tlSeparSchool > span.MuiTimelineConnector-root{
+    background-color: green !important;
+}
+div.tlSeparSchool > span.MuiTimelineDot-root{
+    background-color: white;
+    border: 1px solid green;
+}
+div.tlSeparSchool > span.MuiTimelineDot-root > svg.MuiSvgIcon-root{
+    fill: green;
+}
+/*---------------------------------------------------------------*/
