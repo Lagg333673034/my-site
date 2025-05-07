@@ -21,8 +21,5 @@ Other:<br/>
 
 //dialog-window https://mui.com/toolpad/core/react-use-dialogs/<br/>
 
-
 //https://mui.com/material-ui/react-timeline/<br/>
-опыт показывать <br/>
-
 &nbsp;<br/>

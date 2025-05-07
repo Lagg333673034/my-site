@@ -135,6 +135,16 @@ const PageMain = () => {
                             </tbody>
                         </table>
                     </div>
+
+                    <Divider>
+                        <p className='myDivider'>&nbsp;About me&nbsp;</p>
+                    </Divider>
+
+                    <div className='blockAboutMe'>
+                        <p>I am sociable, responsible, punctual, stress-resistant. No bad habits.</p>
+                        <p>Study React.js (+typescript) and Node.js. Also study Laravel.</p>
+                    </div>
+                    
                 </div>
                 <div className='block1Right'>
                     <Divider>
