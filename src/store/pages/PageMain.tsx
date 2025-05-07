@@ -1,8 +1,7 @@
 import React from 'react';
-import { Email, Language, LocationOn, Person, Phone, School, Telegram, WhatsApp, Work } from '@mui/icons-material';
+import { Email, Language, LocationOn, Phone, School, Telegram, WhatsApp, Work } from '@mui/icons-material';
 import { Avatar,Chip, Divider} from '@mui/material';
 import MyPhotoImg  from '../img/my-photo.jpg';
-
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -10,12 +9,6 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import Typography from '@mui/material/Typography';
-
 
 const PageMain = () => {
     /*---------- AGE ----------*/
@@ -34,118 +27,118 @@ const PageMain = () => {
         <div>
             <div className='block1Container'>
                 <div className='block1Left'>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td colSpan={3}>
-                                    <Avatar src={MyPhotoImg} sx={{ width: 200, height: 200 }}/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan={3}>
-                                    <div style={{fontSize:'1.4rem'}}>
-                                        Alexander Guridov
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Age</td>
-                                <td><Person className='myIcons' sx={{borderColor:'black',background:'white',color:'black'}}/></td>
-                                <td>{age}&nbsp;years old</td>
-                            </tr>
-                            <tr>
-                                <td>Locationon</td>
-                                <td>
-                                    <LocationOn className='myIcons' sx={{borderColor:'black',background:'white',color:'black'}}/>
-                                </td>
-                                <td>Armenia, Erevan</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td><Email className='myIcons' sx={{borderColor:'blue',background:'white',color:'blue'}}/></td>
-                                <td>Lagg333673034@yandex.ru</td>
-                            </tr>
-                            <tr>
-                                <td>Mobile</td>
-                                <td><Phone className='myIcons' sx={{borderColor:'blue',background:'white',color:'blue'}}/></td>
-                                <td>+374 41 382 032</td>
-                            </tr>
-                            <tr>
-                                <td>WhatsApp</td>
-                                <td><WhatsApp className='myIcons' sx={{borderColor:'#2bb11c',background:'#2bb11c',color:'white'}}/></td>
-                                <td>+374 41 382 032</td>
-                            </tr>
-                            <tr>
-                                <td>Viber</td>
-                                <td><WhatsApp className='myIcons' sx={{borderColor:'#885bef',background:'#885bef',color:'white'}}/></td>
-                                <td>+374 41 382 032</td>
-                            </tr>
-                            <tr>
-                                <td>Telegram</td>
-                                <td><Telegram className='myIcons' sx={{borderColor:'#00a8ff',background:'#00a8ff',color:'white'}}/></td>
-                                <td>+7 963 316 42 36 (@guridov_ag)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                    <div className='block2Container'>
+                        <div className='block2Left'>
+                            <div className='myAvatar'>
+                                <Avatar src={MyPhotoImg}/>
+                            </div>
+                            <div className='myName'>
+                                Alexander Guridov<br />({age}&nbsp;years old)
+                            </div>
+                        </div>
+                        <div className='block2Right'>
+                            <table>
+                            <tbody>
+                                <tr>
+                                    <td>Locationon</td>
+                                    <td>
+                                        <LocationOn className='myIcons' sx={{borderColor:'black',background:'white',color:'black'}}/>
+                                    </td>
+                                    <td>Armenia, Erevan</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><Email className='myIcons' sx={{borderColor:'blue',background:'white',color:'#4135bd'}}/></td>
+                                    <td>Lagg333673034@yandex.ru</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile</td>
+                                    <td><Phone className='myIcons' sx={{borderColor:'blue',background:'white',color:'blue'}}/></td>
+                                    <td>+374 41 382 032</td>
+                                </tr>
+                                <tr>
+                                    <td>WhatsApp</td>
+                                    <td><WhatsApp className='myIcons' sx={{borderColor:'#2bb11c',background:'#2bb11c',color:'white'}}/></td>
+                                    <td>+374 41 382 032</td>
+                                </tr>
+                                <tr>
+                                    <td>Viber</td>
+                                    <td><WhatsApp className='myIcons' sx={{borderColor:'#885bef',background:'#885bef',color:'white'}}/></td>
+                                    <td>+374 41 382 032</td>
+                                </tr>
+                                <tr>
+                                    <td>Telegram</td>
+                                    <td><Telegram className='myIcons' sx={{borderColor:'#00a8ff',background:'#00a8ff',color:'white'}}/></td>
+                                    <td>+7 963 316 42 36<br/>(@guridov_ag)</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
 
                     <Divider>
-                        <Chip label={`Languages `} color="primary"/> 
+                        <p className='myDivider'>&nbsp;Languages&nbsp;</p>
                     </Divider>
 
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><Language /></td>
-                                <td>Russian</td>
-                                <td>Native</td>
-                            </tr>
-                            <tr>
-                                <td><Language /></td>
-                                <td>English</td>
-                                <td>A2-B1</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className='blockLanguages'>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><Language/></td>
+                                    <td>Russian</td>
+                                    <td>Native</td>
+                                </tr>
+                                <tr>
+                                    <td><Language/></td>
+                                    <td>English</td>
+                                    <td>A2-B1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <Divider>
-                        <Chip label={'Skills'} color="primary"/>
+                        <p className='myDivider'>&nbsp;Skills&nbsp;</p>
                     </Divider>
 
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Mail skills</td>
-                                <td>
-                                    <div className='mainSkills'>
-                                        <Chip label={'HTML'}/>
-                                        <Chip label={'CSS'} />
-                                        <Chip label={'JavaScript'} />
-                                        <Chip label={'TypeScript'} />
-                                        <Chip label={'PHP'} />
-                                        <Chip label={'React.js'} />
-                                        <Chip label={'Node.js'} />
-                                        <Chip label={'MySQL'} />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Secondary skills</td>
-                                <td>
-                                    <div className='secondarySkills'>
-                                        <Chip label={'Git'}/>
-                                        <Chip label={'Yii2'}/>
-                                        <Chip label={'WordPress'} />
-                                        <Chip label={'C#'} />
-                                        <Chip label={'MongoDB'} />
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className='blockSkills'>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Main</td>
+                                    <td>
+                                        <div className='mainSkills'>
+                                            <Chip label={'HTML'}/>
+                                            <Chip label={'CSS'} />
+                                            <Chip label={'JavaScript'} />
+                                            <Chip label={'TypeScript'} />
+                                            <Chip label={'PHP'} />
+                                            <Chip label={'React.js'} />
+                                            <Chip label={'Node.js'} />
+                                            <Chip label={'MySQL'} />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Secondary</td>
+                                    <td>
+                                        <div className='secondarySkills'>
+                                            <Chip label={'Git'}/>
+                                            <Chip label={'Yii2'}/>
+                                            <Chip label={'WordPress'} />
+                                            <Chip label={'C#'} />
+                                            <Chip label={'MongoDB'} />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className='block1Right'>
                     <Divider>
-                        <Chip label={'Timeline'} color="primary"/>
+                        <p className='myDivider'>&nbsp;Timeline&nbsp;</p>
                     </Divider>
 
                     <Timeline>
@@ -255,20 +248,196 @@ const PageMain = () => {
                 </div>
             </div>
 
-            <div style={{width:'100%', display:'flex',}}>
-                Other:<br/>
-                //Drawer<br/>
-                //Speed Dial<br/>
-                //Transitions<br/>
-
-                //dialog-window https://mui.com/toolpad/core/react-use-dialogs/<br/>
-
-
-                //https://mui.com/material-ui/react-timeline/<br/>
-                опыт показывать <br/>
-
-                &nbsp;<br/>
+            <div className='block3Container'>
+                <Divider>
+                    <p className='myDivider'>&nbsp;My projects&nbsp;</p>
+                </Divider>
+                <div className='block3First'>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colSpan={2}>1. Application for testing (Full stack):</td>
+                            </tr>
+                            <tr>
+                                <td>Deploy</td>
+                                <td> 
+                                    <a href="https://lagg333673034-my-test-app.netlify.app" target="_blank">
+                                        https://lagg333673034-my-test-app.netlify.app
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Frontend</td>
+                                <td>React.js (JS+TS)</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://www.netlify.com/" target="_blank">
+                                        https://www.netlify.com/
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Github</td>
+                                <td>
+                                    <a href="https://github.com/Lagg333673034/my-react-ts-app3-frontend" target="_blank">
+                                        https://github.com/Lagg333673034/my-react-ts-app3-frontend
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>npm</td>
+                                <td>React, Redux Toolkit (RTK Query), react-router-dom, MUI, @react-oauth/google</td>
+                            </tr>
+                            <tr>
+                                <td>Backend</td>
+                                <td>Node.js</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://render.com/" target="_blank">
+                                        https://render.com/
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Github</td>
+                                <td>
+                                    <a href="https://github.com/Lagg333673034/my-react-ts-app3-backend" target="_blank">
+                                        https://github.com/Lagg333673034/my-react-ts-app3-backend
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>npm</td>
+                                <td>express, mysql2, jsonwebtoken, bcrypt, nodemailer, dotenv, cors, cron</td>
+                            </tr>
+                            <tr>
+                                <td>Database</td>
+                                <td>MySQL</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://freedb.tech/" target="_blank">
+                                        https://freedb.tech/
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className='block3Second'>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colSpan={2}>2. Todo application (Full stack):</td>
+                            </tr>
+                            <tr>
+                                <td>Deploy</td>
+                                <td>
+                                    <a href="https://silver-cucurucho-d41282.netlify.app" target="_blank">
+                                        https://silver-cucurucho-d41282.netlify.app
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Frontend</td>
+                                <td>React.js (JS)</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://www.netlify.com/" target="_blank">
+                                        https://www.netlify.com/
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Github</td>
+                                <td>
+                                    <a href="https://github.com/Lagg333673034/my-react-todo-client" target="_blank">
+                                        https://github.com/Lagg333673034/my-react-todo-client
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>npm</td>
+                                <td>React, Redux, axios, react-router-dom, moment, MUI</td>
+                            </tr>
+                            <tr>
+                                <td>Backend</td>
+                                <td>Node.js</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://render.com/" target="_blank">
+                                        https://render.com/
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Github</td>
+                                <td>
+                                    <a href="https://github.com/Lagg333673034/my-react-todo-server" target="_blank">
+                                        https://github.com/Lagg333673034/my-react-todo-server
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>npm</td>
+                                <td>express, express-fileupload, express-validator, jsonwebtoken, bcrypt, mongoose, nodemailer, cors, dotenv</td>
+                            </tr>
+                            <tr>
+                                <td>Database</td>
+                                <td>MongoDB</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://www.mongodb.com/" target="_blank">
+                                        https://www.mongodb.com/
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <div className='block4Container'>
+                <Divider>
+                    <p className='myDivider'>&nbsp;Other works&nbsp;</p>
+                </Divider>
+
+                <div className='block4First'>
+                    <p>1) Html, css</p>
+                    <p>Github:&nbsp;
+                        <a href="https://github.com/Lagg333673034/project-mercedes" target="_blank">
+                        https://github.com/Lagg333673034/project-mercedes</a>
+                    </p>
+                    <p>Deploy:&nbsp;
+                        <a href="https://lagg333673034.github.io/project-mercedes/" target="_blank">
+                        https://lagg333673034.github.io/project-mercedes/</a>
+                    </p>
+                    <br/>
+
+                    <p>2) Html, css, javascript, svg</p>
+                    <p>Github:&nbsp;
+                        <a href="https://github.com/Lagg333673034/project-svg-js" target="_blank">
+                        https://github.com/Lagg333673034/project-svg-js</a>
+                    </p>
+                    <p>Deploy:&nbsp;
+                        <a href="https://lagg333673034.github.io/project-svg-js/" target="_blank">
+                        https://lagg333673034.github.io/project-svg-js/</a>
+                    </p>
+                    <br/>
+                </div>
+            </div>
+
         </div>
     )
 };

@@ -1,27 +1,132 @@
+@property --rotate {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
 body{
     font-size: 16px;
-    margin: 10px 15px;
+    margin: 5px 5px;
     padding: 0;
+
+    animation: rotate1 30s linear infinite;
+    background-image: linear-gradient(var(--rotate), #a40000, #0042cc, #238f00);
 }
+
+@keyframes rotate1 {
+    from {
+      --rotate: 0deg;
+    }
+    to {
+      --rotate: 360deg;
+    }
+  }
 .waitServerWakeUp{
     display:flex;
     flex-direction:row;
     align-items:center;
     font-size: 1.2rem;
 }
+a{
+    color: #1111ff;
+}
+/*---------------------------------------------------------------*/
+.block1Left,
+.block1Right,
+.block3Container,
+.block4Container{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+    background-color: #ffffffc7;
+}
+.block2Left,
+.block2Right,
+.blockLanguages,
+.blockSkills,
+.block3First,
+.block3Second,
+.block4First{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffffff36;
+}
+/*---------------------------------------------------------------*/
+.myAvatar,
+.myName{
+    max-width: 200px;
+}
+.myAvatar > .MuiAvatar-root{
+    width: 200px;
+    height: 200px;
+}
+.myName{
+    font-size: 1.2rem;
+    text-align: center;
+}
 /*---------------------------------------------------------------*/
 .block1Container {
     display: grid;
+    justify-items: center;
     grid-gap: 0px;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 .block1Left{
-    display: block;
-    min-width: 360px;
+    max-width: 700px;
 }
-.block1Right{
-    display: block;
-    min-width: 360px;
+/*---------------------------------------------------------------*/
+.block2Container {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.block2Right > table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.block2Right > table > tbody > tr:hover{
+    background-color: rgba(255 255 255 / 24%);
+}
+.block2Right > table > tbody > tr > td{
+    word-break: break-all;
+}
+.block2Right > table > tbody > tr > td:nth-child(1){
+    min-width: 80px;
+}
+.block2Right > table > tbody > tr > td:nth-child(2){
+    text-align: center;
+}
+.block2Left{
+    text-align: -webkit-center;
+}
+/*---------------------------------------------------------------*/
+.myDivider{
+    color: blue;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    margin: 15px 0;
+}
+.MuiDivider-root{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+.MuiDivider-root::before,
+.MuiDivider-root::after{
+    border-top: thin solid rgb(26 0 220 / 20%) !important;
+}
+/*---------------------------------------------------------------*/
+.MuiChip-root{
+    width: auto !important;
+    height: auto !important;
+    margin: 3px 5px !important;
+    padding: 3px 5px !important;
+}
+span.MuiChip-label{
+    width: auto;
+    height: auto;
 }
 /*---------------------------------------------------------------*/
 .myIcons{
@@ -32,38 +137,60 @@ body{
     border-radius: 5px;
 }
 /*---------------------------------------------------------------*/
-div.mainSkills > div.MuiChip-root{
-    color: black;
-    background-color: #50baff;
+.mainSkills,
+.secondarySkills{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 10px;
+    line-height: 1.1;
+    margin: 10px 5px;
 }
-div.secondarySkills > div.MuiChip-root{
-    color: black;
+.mainSkills > div.MuiChip-root{
+    background-color: #6cc5ff;
+}
+.secondarySkills > div.MuiChip-root{
     background-color: #fff4a3;
 }
+.mainSkills > div.MuiChip-root,
+.secondarySkills > div.MuiChip-root{
+    color: black;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+}
+.mainSkills > div.MuiChip-root > span.MuiChip-label,
+.secondarySkills > div.MuiChip-root > span.MuiChip-label{
+    width: auto;
+    height: auto;
+}
 /*---------------------------------------------------------------*/
+ul.MuiTimeline-root{
+    padding: 0;
+    margin: 0;
+}
 .tlOppositeContent{
-    min-width: 100px !important;
-    max-width: 130px !important;
-    padding: 15px 10px 15px 0px !important;
+    max-width: 100px !important;
+    padding: 15px 10px !important;
     font-size: 0.9rem !important;
     margin: auto 0 !important;
     color: #3a3a3a;
 }
-div.tlContent{
+.tlContent{
     line-height: 1;
-    padding: 15px 10px !important;
+    padding: 5px 10px 20px 10px !important
 }
-div.tlCompanyName{
+.tlCompanyName{
     font-size: 1rem;
     font-weight: bold;
     color: blue;
     margin: 0 0 5px 0;
 }
-div.tlPostName{
+.tlPostName{
     font-size: 1rem;
     margin: 0 0 5px 0;
 }
-div.tlDescription > p{
+.tlDescription > p{
     margin: 0;
     padding: 0;
     color: #525252;
@@ -72,25 +199,77 @@ div.tlDescription > p{
     text-align: justify;
 }
 
-
-div.tlSeparWork > span.MuiTimelineConnector-root{
+.tlSeparWork > span.MuiTimelineConnector-root{
     background-color: purple !important;
 }
-div.tlSeparWork > span.MuiTimelineDot-root{
+.tlSeparWork > span.MuiTimelineDot-root{
     background-color: white;
     border: 1px solid purple;
 }
-div.tlSeparWork > span.MuiTimelineDot-root > svg.MuiSvgIcon-root{
+.tlSeparWork > span.MuiTimelineDot-root > svg.MuiSvgIcon-root{
     fill: purple;
 }
-div.tlSeparSchool > span.MuiTimelineConnector-root{
+.tlSeparSchool > span.MuiTimelineConnector-root{
     background-color: green !important;
 }
-div.tlSeparSchool > span.MuiTimelineDot-root{
+.tlSeparSchool > span.MuiTimelineDot-root{
     background-color: white;
     border: 1px solid green;
 }
-div.tlSeparSchool > span.MuiTimelineDot-root > svg.MuiSvgIcon-root{
+.tlSeparSchool > span.MuiTimelineDot-root > svg.MuiSvgIcon-root{
     fill: green;
 }
 /*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+.block3Container{
+    text-align: -webkit-center;
+}
+.block3First,
+.block3Second{
+    max-width: 550px;
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
+}
+.block3First > table,
+.block3Second > table{
+    border-collapse: collapse;
+}
+.block3First > table > tbody > tr:hover,
+.block3Second > table > tbody > tr:hover{
+    background-color: rgba(255 255 255 / 24%);
+}
+.block3First > table > tbody > tr:nth-child(1),
+.block3Second > table > tbody > tr:nth-child(1){
+    background-color: rgba(40, 90, 255, 0.54);
+}
+.block3First > table > tbody > tr:nth-child(3),
+.block3Second > table > tbody > tr:nth-child(3),
+.block3First > table > tbody > tr:nth-child(7),
+.block3Second > table > tbody > tr:nth-child(7),
+.block3First > table > tbody > tr:nth-child(11),
+.block3Second > table > tbody > tr:nth-child(11){
+    background-color: rgba(183, 183, 183, 0.673);
+}
+.block3First > table > tbody > tr > td,
+.block3Second > table > tbody > tr > td{
+    margin: 0;
+    padding: 7px;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.block3First > table > tbody > tr > td:nth-child(1),
+.block3Second > table > tbody > tr > td:nth-child(1){
+    width: 75px;
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+.block4Container{
+    text-align: -webkit-center;
+}
+.block4First{
+    max-width: 550px;
+    padding: 10px;
+    text-align: left;
+}

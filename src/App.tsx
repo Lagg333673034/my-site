@@ -5,10 +5,9 @@ import Navbar from './store/components/navbar/Navbar';
 import AppRouter from './store/routes/AppRouter';
 
 function App() {
-
   return (
     <BrowserRouter>
-        <Navbar/>
+        {/*<Navbar/>*/}
         <AppRouter/>
     </BrowserRouter>
   );

@@ -21,10 +21,10 @@ const Navbar = () => {
       borderRadius: `8px`,
       backdropFilter: 'blur(24px)',
       border: '1px solid #d5d5d5',
-      backgroundColor: 'transparent',
+      backgroundColor: '#ffdcc2',
       boxShadow: '0 0 5px #d5d5d5;',
-      padding: '10px 12px',
-      marginBottom: '10px',
+      padding: '10px 10px',
+      margin: '5px 5px',
   }));
 
   const [open, setOpen] = React.useState(false);
