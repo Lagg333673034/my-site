@@ -1,15 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import Navbar from './store/components/navbar/Navbar';
-import AppRouter from './store/routes/AppRouter';
+import PageMain from './store/pages/PageMain';
 
 function App() {
   return (
-    <BrowserRouter>
-        {/*<Navbar/>*/}
-        <AppRouter/>
-    </BrowserRouter>
+    <PageMain/>
   );
 }
 
