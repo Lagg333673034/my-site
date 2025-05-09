@@ -7,11 +7,9 @@ body{
     font-size: 16px;
     margin: 5px 5px;
     padding: 0;
-
     animation: rotate1 30s linear infinite;
-    background-image: linear-gradient(var(--rotate), #a40000, #0042cc, #238f00);
+    background-image: linear-gradient(var(--rotate), #840000, #0000BB, #008400);
 }
-
 @keyframes rotate1 {
     from {
       --rotate: 0deg;
@@ -38,7 +36,7 @@ a{
     padding: 10px;
     border: 1px solid #d5d5d5;
     border-radius: 10px;
-    background-color: #ffffffc7;
+    background-color: #ffffffbb;
 }
 .block2Left,
 .block2Right,
@@ -52,11 +50,26 @@ a{
     padding: 5px;
     border-radius: 10px;
     background-color: #ffffff36;
+    box-shadow: 0 0 1px 0px;
+    word-wrap: break-word;
 }
 /*---------------------------------------------------------------*/
-.myAvatar,
-.myName{
+.flagEN,.flagRU{
+    width: 40px;
+    height: 30px;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 0 2px 0px;
+    cursor: pointer;
+}
+.myAvatar{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     max-width: 200px;
+    
 }
 .myAvatar > .MuiAvatar-root{
     width: 200px;
@@ -71,10 +84,21 @@ a{
     display: grid;
     justify-items: center;
     grid-gap: 0px;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 .block1Left{
     max-width: 700px;
+}
+.block2Left{
+    text-align: -webkit-center;
+    display: flex;
+    grid-gap: 0px;
+    grid-template-columns: minmax(40px, 1fr) 1fr minmax(40px, 1fr);
+    justify-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 /*---------------------------------------------------------------*/
 .block2Container {
@@ -90,16 +114,13 @@ a{
     background-color: rgba(255 255 255 / 24%);
 }
 .block2Right > table > tbody > tr > td{
-    word-break: break-all;
+    word-break: break-word;
 }
 .block2Right > table > tbody > tr > td:nth-child(1){
     min-width: 80px;
 }
 .block2Right > table > tbody > tr > td:nth-child(2){
     text-align: center;
-}
-.block2Left{
-    text-align: -webkit-center;
 }
 /*---------------------------------------------------------------*/
 .myDivider{
@@ -138,6 +159,25 @@ span.MuiChip-label{
     border-radius: 5px;
 }
 /*---------------------------------------------------------------*/
+.blockLanguages > table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.blockLanguages > table > tbody > tr:hover{
+    background-color: rgba(255 255 255 / 24%);
+}
+.blockLanguages > table > tbody > tr > td{
+    text-align: left;
+    vertical-align: middle;
+}
+.blockLanguages > table > tbody > tr > td:nth-child(1){
+    width: 30px;
+    text-align: center;
+}
+.blockLanguages > table > tbody > tr > td:nth-child(2){
+    width: 100px;
+}
+/*---------------------------------------------------------------*/
 .mainSkills,
 .secondarySkills{
     border-left: 2px solid black;
@@ -166,30 +206,37 @@ span.MuiChip-label{
     height: auto;
 }
 /*---------------------------------------------------------------*/
+.blockAboutMe > p{
+    margin: 12px 5px 12px 5px;
+    padding: 0;
+}
+/*---------------------------------------------------------------*/
 ul.MuiTimeline-root{
     padding: 0;
     margin: 0;
 }
 .tlOppositeContent{
-    max-width: 100px !important;
-    padding: 15px 10px !important;
+    max-width: 90px !important;
+    padding: 5px 5px 5px 5px!important;
     font-size: 0.9rem !important;
     margin: auto 0 !important;
     color: #3a3a3a;
 }
 .tlContent{
     line-height: 1;
-    padding: 5px 10px 20px 10px !important
+    padding: 5px 5px 15px 5px!important;
 }
 .tlCompanyName{
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
-    font-weight: bold;
+    line-height: 1.2;
     color: blue;
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
 }
 .tlPostName{
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
 }
 .tlDescription > p{
     margin: 0;
@@ -198,6 +245,7 @@ ul.MuiTimeline-root{
     font-size: 1rem;
     font-family: auto;
     text-align: justify;
+    line-height: 1.2;
 }
 
 .tlSeparWork > span.MuiTimelineConnector-root{
@@ -258,11 +306,13 @@ ul.MuiTimeline-root{
     padding: 7px;
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
+    word-break: break-word;
 }
 .block3First > table > tbody > tr > td:nth-child(1),
 .block3Second > table > tbody > tr > td:nth-child(1){
     width: 75px;
 }
+
 /*---------------------------------------------------------------*/
 /*---------------------------------------------------------------*/
 /*---------------------------------------------------------------*/
@@ -273,4 +323,14 @@ ul.MuiTimeline-root{
     max-width: 550px;
     padding: 10px;
     text-align: left;
+    word-break: break-word;
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+@media (min-width: 1px) and (max-width: 599px){
+    
+}
+@media (min-width: 600px) {
+
 }

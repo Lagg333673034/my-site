@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Email, Language, LocationOn, Phone, School, Telegram, WhatsApp, Work } from '@mui/icons-material';
 import { Avatar,Chip, Divider} from '@mui/material';
 import MyPhotoImg  from '../img/my-photo.jpg';
@@ -9,6 +9,10 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import FlagEN from '../img/flagEN.svg';
+import FlagRU from '../img/flagRU.svg';
+import MyLocalization from '../languages/index'
+
 
 const PageMain = () => {
     /*---------- AGE ----------*/
@@ -22,7 +26,8 @@ const PageMain = () => {
       age = age-1;
     }
     /*---------- AGE ----------*/
-    
+    const [langIndex,setLangIndex] = useState<number>(0);
+
     return(
         <div>
             <div className='block1Container'>
@@ -30,45 +35,47 @@ const PageMain = () => {
 
                     <div className='block2Container'>
                         <div className='block2Left'>
+                            <img src={FlagEN} className='flagEN' onClick={()=>{setLangIndex(0)}}/>
                             <div className='myAvatar'>
                                 <Avatar src={MyPhotoImg}/>
+                                <div className='myName'>
+                                    {MyLocalization[langIndex].block_1_1}<br />({age}&nbsp;{MyLocalization[langIndex].block_1_2})
+                                </div>
                             </div>
-                            <div className='myName'>
-                                Alexander Guridov<br />({age}&nbsp;years old)
-                            </div>
+                            <img src={FlagRU} className='flagRU' onClick={()=>{setLangIndex(1)}}/>
                         </div>
                         <div className='block2Right'>
                             <table>
                             <tbody>
                                 <tr>
-                                    <td>Locationon</td>
+                                    <td>{MyLocalization[langIndex].block_2_1}</td>
                                     <td>
                                         <LocationOn className='myIcons' sx={{borderColor:'black',background:'white',color:'black'}}/>
                                     </td>
-                                    <td>Armenia, Erevan</td>
+                                    <td>{MyLocalization[langIndex].block_2_7}</td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
+                                    <td>{MyLocalization[langIndex].block_2_2}</td>
                                     <td><Email className='myIcons' sx={{borderColor:'blue',background:'white',color:'#4135bd'}}/></td>
                                     <td>Lagg333673034@yandex.ru</td>
                                 </tr>
                                 <tr>
-                                    <td>Mobile</td>
+                                    <td>{MyLocalization[langIndex].block_2_3}</td>
                                     <td><Phone className='myIcons' sx={{borderColor:'blue',background:'white',color:'blue'}}/></td>
                                     <td>+374 41 382 032</td>
                                 </tr>
                                 <tr>
-                                    <td>WhatsApp</td>
+                                    <td>{MyLocalization[langIndex].block_2_4}</td>
                                     <td><WhatsApp className='myIcons' sx={{borderColor:'#2bb11c',background:'#2bb11c',color:'white'}}/></td>
                                     <td>+374 41 382 032</td>
                                 </tr>
                                 <tr>
-                                    <td>Viber</td>
+                                    <td>{MyLocalization[langIndex].block_2_5}</td>
                                     <td><WhatsApp className='myIcons' sx={{borderColor:'#885bef',background:'#885bef',color:'white'}}/></td>
                                     <td>+374 41 382 032</td>
                                 </tr>
                                 <tr>
-                                    <td>Telegram</td>
+                                    <td>{MyLocalization[langIndex].block_2_6}</td>
                                     <td><Telegram className='myIcons' sx={{borderColor:'#00a8ff',background:'#00a8ff',color:'white'}}/></td>
                                     <td>+7 963 316 42 36<br/>(@guridov_ag)</td>
                                 </tr>
@@ -78,7 +85,7 @@ const PageMain = () => {
                     </div>
 
                     <Divider>
-                        <p className='myDivider'>&nbsp;Languages&nbsp;</p>
+                        <p className='myDivider'>&nbsp;{MyLocalization[langIndex].block_3_0}&nbsp;</p>
                     </Divider>
 
                     <div className='blockLanguages'>
@@ -86,27 +93,29 @@ const PageMain = () => {
                             <tbody>
                                 <tr>
                                     <td><Language/></td>
-                                    <td>Russian</td>
-                                    <td>Native</td>
+                                    <td>{MyLocalization[langIndex].block_3_1}</td>
+                                    <td>{MyLocalization[langIndex].block_3_3}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td><Language/></td>
-                                    <td>English</td>
-                                    <td>A2-B1</td>
+                                    <td>{MyLocalization[langIndex].block_3_2}</td>
+                                    <td>{MyLocalization[langIndex].block_3_4}</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <Divider>
-                        <p className='myDivider'>&nbsp;Skills&nbsp;</p>
+                        <p className='myDivider'>&nbsp;{MyLocalization[langIndex].block_4_0}&nbsp;</p>
                     </Divider>
 
                     <div className='blockSkills'>
                         <table>
                             <tbody>
                                 <tr>
-                                    <td>Main</td>
+                                    <td>{MyLocalization[langIndex].block_4_1}</td>
                                     <td>
                                         <div className='mainSkills'>
                                             <Chip label={'HTML'}/>
@@ -121,7 +130,7 @@ const PageMain = () => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Secondary</td>
+                                    <td>{MyLocalization[langIndex].block_4_2}</td>
                                     <td>
                                         <div className='secondarySkills'>
                                             <Chip label={'Git'}/>
@@ -137,24 +146,24 @@ const PageMain = () => {
                     </div>
 
                     <Divider>
-                        <p className='myDivider'>&nbsp;About me&nbsp;</p>
+                        <p className='myDivider'>&nbsp;{MyLocalization[langIndex].block_5_0}&nbsp;</p>
                     </Divider>
 
                     <div className='blockAboutMe'>
-                        <p>I am sociable, responsible, punctual, stress-resistant. No bad habits.</p>
-                        <p>Study React.js (+typescript) and Node.js. Also study Laravel.</p>
+                        <p>{MyLocalization[langIndex].block_5_1}</p>
+                        <p>{MyLocalization[langIndex].block_5_2}</p>
                     </div>
                     
                 </div>
                 <div className='block1Right'>
                     <Divider>
-                        <p className='myDivider'>&nbsp;Timeline&nbsp;</p>
+                        <p className='myDivider'>&nbsp;{MyLocalization[langIndex].block_6_0}&nbsp;</p>
                     </Divider>
 
                     <Timeline>
                         <TimelineItem>
                             <TimelineOppositeContent className='tlOppositeContent'>
-                                2023 - 2025<br/>Yerevan, Armenia
+                                2023 - 2025<br/>{MyLocalization[langIndex].block_6_51}
                             </TimelineOppositeContent>
                             <TimelineSeparator className='tlSeparWork'>
                                 <TimelineConnector/>
@@ -164,17 +173,17 @@ const PageMain = () => {
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent className='tlContent'>
-                                <div className='tlCompanyName'>Sperasoft Company</div>
-                                <div className='tlPostName'>NOC operator</div>
+                                <div className='tlCompanyName'>{MyLocalization[langIndex].block_6_52}</div>
+                                <div className='tlPostName'>{MyLocalization[langIndex].block_6_53}</div>
                                 <div className='tlDescription'>
-                                    <p>– monitoring the health and condition of the IT infrastructure (network components, servers, applications, services) and detection of system failures (using: Zabbix, Datadog).</p>
-                                    <p>– prompt provision of important information about system failures to on-call personnel (using: PagerDuty, Slack, Jira).</p>
+                                    <p>{MyLocalization[langIndex].block_6_54}</p>
+                                    <p>{MyLocalization[langIndex].block_6_55}</p>
                                 </div>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
                             <TimelineOppositeContent className='tlOppositeContent'>
-                                2017 – 2023<br/>Ukraine, Donetsk
+                                2017 – 2023<br/>{MyLocalization[langIndex].block_6_41}
                             </TimelineOppositeContent>
                             <TimelineSeparator className='tlSeparWork'>
                                 <TimelineConnector />
@@ -184,19 +193,19 @@ const PageMain = () => {
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent className='tlContent'>
-                                <div className='tlCompanyName'>Service for control and supervision in the Field of Education and Science</div>
-                                <div className='tlPostName'>Web developer (full stack)</div>
+                                <div className='tlCompanyName'>{MyLocalization[langIndex].block_6_42}</div>
+                                <div className='tlPostName'>{MyLocalization[langIndex].block_6_43}</div>
                                 <div className='tlDescription'>
-                                    <p>– development and maintenance of specialized web information systems using: HTML, CSS, Bootstrap, JavaScript, jQuery, Ajax, PHP, MySQL. (about 5 years; main work)</p>
-                                    <p>– modernization of the system on Yii2. (about 1 year)</p>
-                                    <p>– writing a windows application on C#. (about 1 year)</p>
-                                    <p>– maintaining organization's website on WordPress. (about 1 years)</p>
+                                    <p>{MyLocalization[langIndex].block_6_44}</p>
+                                    <p>{MyLocalization[langIndex].block_6_45}</p>
+                                    <p>{MyLocalization[langIndex].block_6_46}</p>
+                                    <p>{MyLocalization[langIndex].block_6_47}</p>
                                 </div>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
                             <TimelineOppositeContent className='tlOppositeContent'>
-                                2014 - 2017<br/>Russia, Murmansk
+                                2014 - 2017<br/>{MyLocalization[langIndex].block_6_31}
                             </TimelineOppositeContent>
                             <TimelineSeparator className='tlSeparWork'>
                                 <TimelineConnector />
@@ -206,19 +215,19 @@ const PageMain = () => {
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent className='tlContent'>
-                                <div className='tlCompanyName'>Murmansk Shipping Company</div>
-                                <div className='tlPostName'>Service engineer</div>
+                                <div className='tlCompanyName'>{MyLocalization[langIndex].block_6_32}</div>
+                                <div className='tlPostName'>{MyLocalization[langIndex].block_6_33}</div>
                                 <div className='tlDescription'>
-                                    <p>– configuration of computers and office equipment.</p>
-                                    <p>– setting up a local network.</p>
-                                    <p>– minor equipment repairs (if possible).</p>
-                                    <p>– service of Inmarsat Fleet and Iridium satellite stations.</p>
+                                    <p>{MyLocalization[langIndex].block_6_34}</p>
+                                    <p>{MyLocalization[langIndex].block_6_35}</p>
+                                    <p>{MyLocalization[langIndex].block_6_36}</p>
+                                    <p>{MyLocalization[langIndex].block_6_37}</p>
                                 </div>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
                             <TimelineOppositeContent className='tlOppositeContent'>
-                                2012 – 2013<br/>Ukraine, Donetsk
+                                2012 – 2013<br/>{MyLocalization[langIndex].block_6_21}
                             </TimelineOppositeContent>
                             <TimelineSeparator className='tlSeparSchool'>
                                 <TimelineConnector />
@@ -228,16 +237,16 @@ const PageMain = () => {
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent className='tlContent'>
-                                <div className='tlCompanyName'>Specialist.</div>
-                                <div className='tlPostName'>Information management systems and technologies.</div>
+                                <div className='tlCompanyName'>{MyLocalization[langIndex].block_6_22}</div>
+                                <div className='tlPostName'>{MyLocalization[langIndex].block_6_23}</div>
                                 <div className='tlDescription'>
-                                    <p>Donetsk National Technical University</p>
+                                    <p>{MyLocalization[langIndex].block_6_24}</p>
                                 </div>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
                             <TimelineOppositeContent className='tlOppositeContent'>
-                                2009 – 2012<br/>Ukraine, Donetsk
+                                2009 – 2012<br/>{MyLocalization[langIndex].block_6_11}
                             </TimelineOppositeContent>
                             <TimelineSeparator className='tlSeparSchool'>
                                 <TimelineConnector />
@@ -247,10 +256,10 @@ const PageMain = () => {
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent className='tlContent'>
-                                <div className='tlCompanyName'>Bachelor.</div>
-                                <div className='tlPostName'>Computer Science.</div>
+                                <div className='tlCompanyName'>{MyLocalization[langIndex].block_6_12}</div>
+                                <div className='tlPostName'>{MyLocalization[langIndex].block_6_13}</div>
                                 <div className='tlDescription'>
-                                    <p>Donetsk National Technical University</p>
+                                    <p>{MyLocalization[langIndex].block_6_14}</p>
                                 </div>
                             </TimelineContent>
                         </TimelineItem>
@@ -260,7 +269,7 @@ const PageMain = () => {
 
             <div className='block3Container'>
                 <Divider>
-                    <p className='myDivider'>&nbsp;My projects&nbsp;</p>
+                    <p className='myDivider'>&nbsp;{MyLocalization[langIndex].block_7_0}&nbsp;</p>
                 </Divider>
                 <div className='block3First'>
                     <table>
@@ -420,7 +429,7 @@ const PageMain = () => {
 
             <div className='block4Container'>
                 <Divider>
-                    <p className='myDivider'>&nbsp;Other works&nbsp;</p>
+                    <p className='myDivider'>&nbsp;{MyLocalization[langIndex].block_8_0}&nbsp;</p>
                 </Divider>
 
                 <div className='block4First'>
