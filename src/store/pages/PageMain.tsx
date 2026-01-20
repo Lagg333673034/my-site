@@ -163,6 +163,27 @@ const PageMain = () => {
                     <Timeline>
                         <TimelineItem>
                             <TimelineOppositeContent className='tlOppositeContent'>
+                                2025 - 2025<br/>{MyLocalization[langIndex].block_6_61}
+                            </TimelineOppositeContent>
+                            <TimelineSeparator className='tlSeparWork'>
+                                <TimelineConnector/>
+                                    <TimelineDot >
+                                        <Work/>
+                                    </TimelineDot>
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent className='tlContent'>
+                                <div className='tlCompanyName'>{MyLocalization[langIndex].block_6_62}</div>
+                                <div className='tlPostName'>{MyLocalization[langIndex].block_6_63}</div>
+                                <div className='tlDescription'>
+                                    <p>{MyLocalization[langIndex].block_6_64}</p>
+                                    <p>{MyLocalization[langIndex].block_6_65}</p>
+                                </div>
+                            </TimelineContent>
+                        </TimelineItem>
+
+                        <TimelineItem>
+                            <TimelineOppositeContent className='tlOppositeContent'>
                                 2023 - 2025<br/>{MyLocalization[langIndex].block_6_51}
                             </TimelineOppositeContent>
                             <TimelineSeparator className='tlSeparWork'>
@@ -419,6 +440,79 @@ const PageMain = () => {
                                 <td>
                                     <a href="https://www.mongodb.com/" target="_blank">
                                         https://www.mongodb.com/
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className='block3Third'>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colSpan={2}>3. Online store (Full stack):</td>
+                            </tr>
+                            <tr>
+                                <td>Deploy</td>
+                                <td>
+                                    <a href="https://fluffy-haupia-628eca.netlify.app" target="_blank">
+                                        https://fluffy-haupia-628eca.netlify.app
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Frontend</td>
+                                <td>Vue.js</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://www.netlify.com/" target="_blank">
+                                        https://www.netlify.com/
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Github</td>
+                                <td>
+                                    <a href="https://github.com/Lagg333673034/online-store-frontend" target="_blank">
+                                        https://github.com/Lagg333673034/online-store-frontend
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>npm</td>
+                                <td>Axios</td>
+                            </tr>
+                            <tr>
+                                <td>Backend</td>
+                                <td>Laravel</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://alwaysdata.com/" target="_blank">
+                                        https://alwaysdata.com/
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Github</td>
+                                <td>
+                                    <a href="https://github.com/Lagg333673034/online-store-backend" target="_blank">
+                                        https://github.com/Lagg333673034/online-store-backend
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Database</td>
+                                <td>MySQL</td>
+                            </tr>
+                            <tr>
+                                <td>Upload to</td>
+                                <td>
+                                    <a href="https://alwaysdata.com/" target="_blank">
+                                        https://alwaysdata.com/
                                     </a>
                                 </td>
                             </tr>

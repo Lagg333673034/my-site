@@ -23,12 +23,9 @@ npm run predeploy
 npm run deploy
 
 
-Other:<br/>
-//Drawer<br/> -- mobile
-//Speed Dial<br/> -- mobile
-//Transitions<br/>
 
-//dialog-window https://mui.com/toolpad/core/react-use-dialogs/<br/>
 
-//https://mui.com/material-ui/react-timeline/<br/>
-&nbsp;<br/>
+//npm run deploy
+
+
+//npm start  //-- esli vdryg zabil ili v package.json posmotri :)

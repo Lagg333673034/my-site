@@ -7,7 +7,7 @@ body{
     font-size: 16px;
     margin: 5px 5px;
     padding: 0;
-    animation: rotate1 30s linear infinite;
+    animation: rotate1 60s linear infinite;
     background-image: linear-gradient(var(--rotate), #840000, #0000BB, #008400);
 }
 @keyframes rotate1 {
@@ -45,6 +45,7 @@ a{
 .blockAboutMe,
 .block3First,
 .block3Second,
+.block3Third,
 .block4First{
     margin: 5px;
     padding: 5px;
@@ -275,33 +276,42 @@ ul.MuiTimeline-root{
     text-align: -webkit-center;
 }
 .block3First,
-.block3Second{
+.block3Second,
+.block3Third{
     max-width: 550px;
     margin: 0px 0px 20px 0px;
     padding: 10px;
 }
 .block3First > table,
-.block3Second > table{
+.block3Second > table,
+.block3Third > table{
+    width: 100%;
     border-collapse: collapse;
 }
 .block3First > table > tbody > tr:hover,
-.block3Second > table > tbody > tr:hover{
+.block3Second > table > tbody > tr:hover,
+.block3Third > table > tbody > tr:hover{
     background-color: rgba(255 255 255 / 24%);
 }
 .block3First > table > tbody > tr:nth-child(1),
-.block3Second > table > tbody > tr:nth-child(1){
+.block3Second > table > tbody > tr:nth-child(1),
+.block3Third > table > tbody > tr:nth-child(1){
     background-color: rgba(40, 90, 255, 0.54);
 }
 .block3First > table > tbody > tr:nth-child(3),
 .block3Second > table > tbody > tr:nth-child(3),
+.block3Third > table > tbody > tr:nth-child(3),
 .block3First > table > tbody > tr:nth-child(7),
 .block3Second > table > tbody > tr:nth-child(7),
+.block3Third > table > tbody > tr:nth-child(7),
 .block3First > table > tbody > tr:nth-child(11),
-.block3Second > table > tbody > tr:nth-child(11){
+.block3Second > table > tbody > tr:nth-child(11),
+.block3Third > table > tbody > tr:nth-child(10){
     background-color: rgba(183, 183, 183, 0.673);
 }
 .block3First > table > tbody > tr > td,
-.block3Second > table > tbody > tr > td{
+.block3Second > table > tbody > tr > td,
+.block3Third > table > tbody > tr > td{
     margin: 0;
     padding: 7px;
     font-size: 1rem;
@@ -309,7 +319,8 @@ ul.MuiTimeline-root{
     word-break: break-word;
 }
 .block3First > table > tbody > tr > td:nth-child(1),
-.block3Second > table > tbody > tr > td:nth-child(1){
+.block3Second > table > tbody > tr > td:nth-child(1),
+.block3Third > table > tbody > tr > td:nth-child(1){
     width: 75px;
 }
 

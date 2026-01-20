@@ -22,9 +22,15 @@ export const MyLocEN = ({
 
     block_5_0: "About me",
     block_5_1: "I am sociable, responsible, punctual, stress-resistant. No bad habits.",
-    block_5_2: "Study React.js (+typescript) and Node.js. Also study Laravel.",
+    block_5_2: "I study the Unreal Engine.",
 
     block_6_0: "Timeline",
+
+
+    block_6_61: "Yerevan, Armenia",
+    block_6_62: "Individual entrepreneur Karen Danielyan",
+    block_6_63: "Operator thermoplastics machine",
+    block_6_64: "– manufacturer: WINDSOR, model: SP 80 DD",
 
     block_6_51: "Yerevan, Armenia",
     block_6_52: "Sperasoft Company",
